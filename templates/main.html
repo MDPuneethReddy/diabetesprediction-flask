@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Diabetes prediction</title>
+{% endblock %}
+
+{% block body %}
+<h1>Diabetes Prediction</h1>
+
+    <hr>
+    
+
+    <form action='/predict' method='POST'>
+      <div class="form-group">
+  <label for="pregnencies">Pregnencies </label>
+  <input type="text" class="form-control" name='pregnencies'  id="pregnencies"  >
+</div>
+<div class="form-group">
+  <label for="glucose">Glucose </label>
+  <input type="text" class="form-control" name='glucose' id="glucose">
+<div class="form-group">
+  <label for="bloodpressure">BloodPressure</label>
+  <input type="text" class="form-control" name='bloodpressure'  id="bloodpressure" >
+</div>
+<div class="form-group">
+  <label for="skinthickness">SkinThickness</label>
+  <input type="text" class="form-control" name='skinthickness'  id="skinthickness" >
+</div>
+<div class="form-group">
+  <label for="insulin">Insulin</label>
+  <input type="text" class="form-control" name='insulin'  id="insulin" >
+</div>
+<div class="form-group">
+  <label for="BMI">BMI</label>
+  <input type="text" class="form-control" name='BMI'  id="BMI" >
+</div>
+<div class="form-group">
+  <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction</label>
+  <input type="text" class="form-control" name='DiabetesPedigreeFunction'  id="DiabetesPedigreeFunction" >
+</div>
+<div class="form-group">
+  <label for="age">Age  </label>
+  <input type="text" class="form-control" name='age'  id="age" >
+</div>
+<form>
+  
+  
+      <input type='submit'  class="btn btn-primary" value='Predict'>
+    </form>
+    <hr>
+
+    
+
+{% endblock %}
